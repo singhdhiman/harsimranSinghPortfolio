@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Download, Mail, MessageCircle } from "lucide-react";
 import { scrollToSection } from "../utils/common";
 import { site } from "../data/site";
 import Reveal from "./Reveal";
@@ -56,7 +56,7 @@ export default function Home({ isDark }: Props) {
                   {site.valueProp}
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3">
                   <button
                     type="button"
                     onClick={() => scrollToSection("projects")}
@@ -68,6 +68,19 @@ export default function Home({ isDark }: Props) {
                   >
                     View Projects
                   </button>
+                  <a
+                    href={site.cvPath}
+                    download
+                    className={`text-lg font-semibold px-7 py-3 rounded-xl transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2 ${
+                      isDark
+                        ? "border border-emerald-400/40 bg-emerald-500/10 text-emerald-100 hover:bg-emerald-500/20"
+                        : "border border-emerald-200 bg-emerald-50 text-emerald-900 hover:bg-emerald-100"
+                    }`}
+                    aria-label="Download CV as PDF"
+                  >
+                    <Download size={20} />
+                    Download CV
+                  </a>
                   <a
                     href={`mailto:${site.email}`}
                     className={`text-lg font-semibold px-7 py-3 rounded-xl transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2 ${
@@ -83,11 +96,14 @@ export default function Home({ isDark }: Props) {
                   <button
                     type="button"
                     onClick={() => scrollToSection("contact")}
-                    className={`text-lg font-semibold px-7 py-3 rounded-xl transition-all hover:-translate-y-0.5 ${
-                      isDark ? "text-white/90 hover:text-white" : "text-indigo-900 hover:text-indigo-700"
+                    className={`text-lg font-semibold px-7 py-3 rounded-xl transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2 ${
+                      isDark
+                        ? "border border-white/20 hover:bg-white/10 text-white"
+                        : "border border-indigo-200 hover:bg-indigo-50 text-indigo-900 bg-white"
                     }`}
                     aria-label="Scroll to contact section"
                   >
+                    <MessageCircle size={20} className={isDark ? "text-white" : "text-indigo-700"} />
                     Contact
                   </button>
                 </div>

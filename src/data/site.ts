@@ -13,5 +13,7 @@ export const site = {
     github: "#",
     linkedin: "#",
   },
+  /** Place your PDF at `public/cv/Harsimran-Singh-CV.pdf` (same filename) */
+  cvPath: "/cv/Harsimran-Singh-CV.pdf",
 } as const;
 

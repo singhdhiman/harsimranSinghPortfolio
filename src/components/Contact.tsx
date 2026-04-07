@@ -1,4 +1,5 @@
-import { Mail, Phone, Pin } from "lucide-react";
+import { Download, Mail, Phone, Pin } from "lucide-react";
+import { site } from "../data/site";
 import Section from "./Section";
 
 const Contact = ({ isDark }: any) => {
@@ -99,6 +100,33 @@ const Contact = ({ isDark }: any) => {
             Let&apos;s collaborate on building scalable, user-centric web applications and cloud-native solutions.
           </div>
         </div>
+
+        <a
+          href={site.cvPath}
+          download
+          className={
+            isDark
+              ? "md:col-span-2 group rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition flex items-center gap-4"
+              : "md:col-span-2 group rounded-2xl border border-indigo-200/60 bg-white p-6 hover:bg-indigo-50 transition flex items-center gap-4"
+          }
+          aria-label="Download CV as PDF"
+        >
+          <span
+            className={
+              isDark
+                ? "inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-indigo-200"
+                : "inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white border border-indigo-200/60 text-indigo-700"
+            }
+          >
+            <Download size={22} />
+          </span>
+          <div className="min-w-0 flex-1">
+            <div className={isDark ? "text-gray-100 font-semibold" : "text-gray-900 font-semibold"}>Résumé</div>
+            <div className={isDark ? "text-indigo-200 font-medium group-hover:underline" : "text-indigo-700 font-medium group-hover:underline"}>
+              Download CV (PDF)
+            </div>
+          </div>
+        </a>
       </div>
     </Section>
   );
