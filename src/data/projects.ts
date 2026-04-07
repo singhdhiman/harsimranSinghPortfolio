@@ -30,7 +30,7 @@ export const projects: ProjectCaseStudy[] = [
       "Tailwind CSS",
       "Microservices",
     ],
-    links: [],
+    links: [{ label: "Live", href: "https://www.concierto.cloud/" }],
     problem:
       "Enterprise cloud teams needed a faster way to migrate, automate, and optimize cloud operations across multi-cloud environments—without building custom tooling for every workflow.",
     solution:
@@ -47,7 +47,7 @@ export const projects: ProjectCaseStudy[] = [
     tagline: "High-scale e-commerce with 1M+ catalog and GraphQL data layer",
     image: "/Images/ecommerce.png",
     stack: ["Next.js", "SCSS", "Relay", "GraphQL", "Node.js"],
-    links: [],
+    links: [{ label: "Live", href: "https://www.theautopartsshop.com/" }],
     problem:
       "Users needed to quickly find and purchase the right part from a massive catalog while maintaining performance, accessibility, and secure checkout flows.",
     solution:
@@ -123,7 +123,7 @@ export const projects: ProjectCaseStudy[] = [
       "NetSuite APIs",
       "AWS",
     ],
-    links: [],
+    links: [{ label: "Live", href: "https://www.prioritywaste.com/" }],
     problem:
       "Operations teams needed a single workflow to assign jobs, track trucks in real time, and keep drivers aligned—while maintaining a strong public web presence.",
     solution:
@@ -157,7 +157,7 @@ export const projects: ProjectCaseStudy[] = [
     tagline: "Cloud-native data mesh UI with AI-driven analytics and federated ownership",
     image: "/Images/fullStack.jpg",
     stack: ["React.js", "TypeScript", "Redux Toolkit", "RTK Query", "Material UI", "GraphQL", "Java"],
-    links: [],
+    links: [{ label: "Live", href: "https://avriodata.ai/" }],
     problem:
       "Organizations needed a secure way to query and interact with data across multiple domains while preserving federated ownership and governance.",
     solution:
